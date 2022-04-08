@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:layout_alignParentTop="true"
+        android:layoutDirection="ltr"
+        android:layout_centerInParent="true"
+        android:id="@+id/exo_player_heading"
+
+        android:background="#63000000"
+        >
+
+        <LinearLayout
+            android:layout_marginStart="8sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="8sp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="22dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="start"
+
+                    android:src="@drawable/group_65"/>
+                <TextView
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7879"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/location"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|end"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginRight="8dp"
+                    android:layout_width="23dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/_665749_location_dot_icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:layout_marginRight="3dp"
+                    android:text="Location"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/player_controls"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:layout_alignParentBottom="true"
+        android:background="#63000000">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/exo_pause"
+                android:src="@drawable/group_743"
+                android:visibility="visible"
+                android:layout_marginLeft="3dp"
+                />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/exo_play"
+                android:src="@drawable/polygon_3"
+                android:visibility="gone"
+                android:layout_marginLeft="3dp"
+                />
+            <com.google.android.exoplayer2.ui.DefaultTimeBar
+                android:layout_toRightOf="@id/exo_play"
+                android:layout_width="520sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/exo_progress"
+                android:layout_marginLeft="2sp"
+                app:unplayed_color="@color/white"
+                app:played_color="#26AAE0"
+
+                app:buffered_color="@color/white"/>
+            <!--        android:layout_marginRight="65dp"-->
+            <!--       />-->
+            <TextView
+                android:layout_marginLeft="7sp"
+                android:layout_toRightOf="@id/exo_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/exo_duration"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal" />
+            <!--        android:layout_marginRight="37dp"-->
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="1sp"
+                android:gravity="center"
+                android:layout_marginLeft="6sp"
+                android:orientation="horizontal"
+                android:layout_marginRight="1sp">
+
+
+                <TextView
+                    android:layout_toRightOf="@id/exo_duration"
+                    android:layout_width="30sp"
+                    android:layout_height="22sp"
+                    android:text="FHD"
+                    android:paddingStart="3dp"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3sp"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:id="@+id/exo_quality"
+                    android:background="@drawable/border"
+
+                    android:paddingLeft="3dp" />
+                <ImageView
+                    android:layout_gravity="end"
+                   android:layout_marginLeft="15sp"
+                    android:layout_toRightOf="@id/exo_quality"
+                    android:layout_width="23sp"
+                    android:layout_height="23sp"
+                    android:src="@drawable/group_713"
+
+
+                    />
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
